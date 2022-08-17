@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  uupdump:
+    build: 
+      context: ./docker
+      dockerfile: UUPdump.Dockerfile
+    working_dir: /cache
+    volumes:
+      - ./cache:/cache
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
